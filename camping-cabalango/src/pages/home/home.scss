@@ -1,0 +1,56 @@
+@import '../../styles/global.scss';
+
+.home {
+  &__hero {
+    display: flex;
+    flex-direction: column; // Mobile first
+    background-color: $color-dark;
+
+    @include responsive(md) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  &__image {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    background-color: $color-dark;
+    padding: 2rem;
+    color: $color-light;
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .home__btn {
+      background-color: $color-light;
+      color: $color-dark;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      width: fit-content;
+      font-size: 1rem;
+    }
+  }
+}

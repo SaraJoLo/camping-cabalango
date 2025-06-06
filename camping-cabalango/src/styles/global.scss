@@ -1,0 +1,48 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+$color-light: #F8F5D2;
+$color-dark: #272519;
+$color-text-dark: #000;
+$font-primary: 'Alegreya Sans SC', sans-serif;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+/* Mixins */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: $bp-md) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $bp-lg) { @content; }
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1rem;
+  color: $color-dark;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: $color-light;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
