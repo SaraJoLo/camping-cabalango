@@ -1,6 +1,6 @@
 .headerBox {
     width: 100%;
-    height: 3.5rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,19 +19,19 @@
     font-weight: 400;
     list-style-type: none;
     font-size: 1rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 .logo img{
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   margin-left: 1rem;
   display: block;
+  padding-top: 0.3rem;
+  
   align-items: center;
   justify-content: flex-start; 
 
   img {
-    width: 10%;
-    height: 10%;
     object-fit: contain;
     display: block;
   }
