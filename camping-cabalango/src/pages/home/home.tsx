@@ -15,8 +15,6 @@ const Home = () => {
         <div className="home__image">
           <img src={campingImg} alt="Vista del camping Cabalango" />
         </div>
-
-       
       </section>
     </main>
   );
