@@ -3,6 +3,7 @@ import Home from './pages/home/home';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import './App.css';
+import Map from './components/map/map';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/map" element={<Map />} />
+     
       </Routes>
       <Footer />
     </Router>

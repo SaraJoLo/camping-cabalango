@@ -15,8 +15,8 @@ import {
   faPersonHiking,
 } from '@fortawesome/free-solid-svg-icons';
 import { PiTree } from 'react-icons/pi';
-
-
+import Map from '../../components/map/map';
+import Weather from '../../components/weather/weather';
 
 const amenities = [
   { icon: <FontAwesomeIcon icon={faRecycle} />, label: "Sostenibilidad y reciclaje" },
@@ -63,6 +63,18 @@ const Home = () => {
             </div>
           </div>
       </section>
+      <section className="location-info">
+  <div className="location-content">
+    <div className="location-map">
+      <Map />
+    </div>
+    <div className="location-weather">
+      <Weather />
+    </div>
+  </div>
+</section>
+
+      
     </section>
   );
 };

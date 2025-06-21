@@ -1,0 +1,17 @@
+.weather-widget {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #meteored-widget {
+    width: 100%;
+    iframe {
+      width: 100%;
+      border: none;
+    }
+  }
+}
