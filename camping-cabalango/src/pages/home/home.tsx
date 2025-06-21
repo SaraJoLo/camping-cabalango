@@ -17,6 +17,7 @@ import {
 import { PiTree } from 'react-icons/pi';
 import Map from '../../components/map/map';
 import Weather from '../../components/weather/weather';
+import InstagramFeed from '../../components/instagram/instagram-feed';
 
 const amenities = [
   { icon: <FontAwesomeIcon icon={faRecycle} />, label: "Sostenibilidad y reciclaje" },
@@ -44,7 +45,7 @@ const Home = () => {
           <p className="subtitle">
             El lugar ideal para recargar energías y disfrutar en la naturaleza
           </p>
-          <a href="tel:352432423" className="home__btn">352432423</a>
+          <a href="tel:+54 9 3541 54-8342" className="home__btn">3541 54-8342</a>
         </div>
         <div className="home__image">
           <img src={campingImg} alt="Vista del camping Cabalango" />
@@ -54,6 +55,7 @@ const Home = () => {
           <div className="icon-section">
             <h3>SERVICIOS</h3>
             <div className="amenities-grid">
+              
              {amenities.map((item, index) => (
                 <div className="amenity-item" key={index}>
                   <div className="amenity-icon">{item.icon}</div>
@@ -65,17 +67,21 @@ const Home = () => {
       </section>
       <section className="location-info">
   <div className="location-content">
+    <h3> ¿CÓMO LLEGAR?</h3>
     <div className="location-map">
       <Map />
+      <p> A 40 minutos de Villa Carlos Paz. Colectivo directo desde la Terminal de Omnibus de Córdoba.</p>
     </div>
     <div className="location-weather">
       <Weather />
-    </div>
-  </div>
-</section>
-
-      
+      </div>
+     </div>
+   </section>
+   <section className="instagram-section">
+    <h3 className='instagram-title'>Viví el camping a través de Instagram</h3>
+      <InstagramFeed /> 
     </section>
+  </section>
   );
 };
 

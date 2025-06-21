@@ -141,6 +141,10 @@
   background-color: $color-light;
 
   h3 {
+     display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   margin-left: 0px;
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
@@ -173,4 +177,15 @@
     }
   }
 }
-
+  .instagram-title {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   margin-left: 0px;
+   font-size: 2rem;
+   font-weight: 300;
+   font-family: $font-primary;
+   color: $color-dark;
+   text-align: center;
+   background-color: $color-light;
+  }
