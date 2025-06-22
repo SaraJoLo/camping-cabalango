@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <img src={campingLogo} alt="Logo Cabalgando" className="footerLogo" />
         <ul>
           <li className="navOp"><Link to="/legal">Avisos Legales</Link></li>
-          <li className="navOp"><Link to="/origen">Terminos y Condiciones</Link></li>
+          <li className="navOp"><Link to="/terminoscondiciones">Terminos y Condiciones</Link></li>
         </ul>
       </div>
 

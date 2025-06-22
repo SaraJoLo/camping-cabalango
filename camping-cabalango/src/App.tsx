@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import './App.css';
 import Map from './components/map/map';
 import Legal from './pages/legal/legal';
+import TerminosCondiciones from './pages/terminos/terminos-condiciones';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<Map />} />
         <Route path="/legal" element={<Legal />} />
+        <Route path="/terminoscondiciones" element={<TerminosCondiciones />} />
       </Routes>
       <Footer />
     </Router>
