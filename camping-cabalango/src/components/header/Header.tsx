@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import campingImg from '../../assets/icons/logo_color.png';
 import './header.scss';
@@ -28,7 +28,7 @@ function Header() {
         <ul className={`navBar ${isMenuOpen ? 'active' : ''}`}>
           <li className="navOp"><Link to="/">Inicio</Link></li>
           <li className="navOp"><Link to="/origen">Origen</Link></li>
-          <li className="navOp"><Link to="/alojar">Aloamiento</Link></li>
+          <li className="navOp"><Link to="/alojar">Alojamiento</Link></li>
           <li className="navOp"><Link to="/servicios">Servicios</Link></li>
           <li className="navOp"><Link to="/info">INFO</Link></li>
           <li className="navOp"><Link to="/contacto">Contacto</Link></li>

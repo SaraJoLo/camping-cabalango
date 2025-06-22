@@ -1,0 +1,89 @@
+@import '../../styles/global.scss';
+
+.origen {
+  padding: 2rem;
+  font-family: $font-primary;
+  color: $color-dark;
+
+  .volverBtn {
+    display: flex;
+    width: 5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-start;
+    margin-left: 0;
+    background: none;
+    border: none;
+    color: $color-dark;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding-left: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .origenBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include responsive(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .origenBox {
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      background: $color-light;
+
+      &Header {
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+
+        .origenBoxImg {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          opacity: 0.6;
+        }
+
+        .origenBoxTitle {
+          position: absolute;
+          bottom: 1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba($color-light, 0.8);
+          padding: 0.5rem 1rem;
+          font-size: 1.25rem;
+          color: $color-dark;
+          border-radius: 4px;
+        }
+      }
+
+      &Content {
+        padding: 1rem;
+
+        p {
+          margin-bottom: 1rem;
+        }
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 1rem;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
