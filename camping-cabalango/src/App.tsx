@@ -7,7 +7,8 @@ import Legal from './pages/legal/legal';
 import TerminosCondiciones from './pages/terminos/terminos-condiciones';
 import Origen from './pages/origen/origen';
 import Alojamiento from './pages/alojamiento/aloja';
-import CategoriaDetalle from './pages/alojamiento/categoria/categoria.tsx'
+import CategoriaDetalle from './pages/alojamiento/categoria/categoria.tsx';
+import Servicios from './pages/servicios/servicios';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/map" element={<Map />} />
             <Route path="/alojar" element={<Alojamiento />} />
             <Route path="/alojar/:categoria" element={<CategoriaDetalle />} />
+            <Route path="/servicios" element={<Servicios />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/terminoscondiciones" element={<TerminosCondiciones />} />
           </Routes>
