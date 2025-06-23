@@ -5,13 +5,16 @@
   font-family: $font-primary;
   color: $color-dark;
 
-   h1 {
-    font-size: 1.9rem;
+  h1 {
+    font-size: 1.5rem;
     font-weight: 300;
-    text-align: flex-start;
     margin-bottom: 2rem;
-    font-family: $font-primary;
     color: $color-dark;
+    text-align: left;
+
+    @include responsive(md) {
+      font-size: 1.9rem;
+    }
   }
 
   .volverBtn {

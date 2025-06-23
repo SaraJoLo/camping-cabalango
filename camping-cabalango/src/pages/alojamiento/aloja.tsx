@@ -86,14 +86,13 @@ const Alojamiento: React.FC = () => {
         >
           <ul>
             <li>🏵 albergue de montaña con capacidad para 80 personas</li>
-            <li>🏵 salón para 400 personas con calefacción</li>
+            <li>🏵 salón para 200 personas con calefacción</li>
             <li>🏵 baños con agua caliente</li>
             <li>🏵 cocina industrial equipada</li>
             <li>🏵 comidas y desayunos a convenir</li>
             <li>🏵 zona de acampar con mesas y parrillas</li>
             <li>🏵 actividades recreativas</li>
             <li>🏵 botiquín primeros auxilios</li>
-            <li>🏵 baños comunes</li>
           </ul>
         </ContentBox>
 

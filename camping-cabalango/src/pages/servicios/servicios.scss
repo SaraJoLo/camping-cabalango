@@ -21,30 +21,37 @@
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    text-align: flex-start;
     margin-bottom: 2rem;
     font-family: $font-primary;
     color: $color-light;
+
+    @include responsive(md) {
+      font-size: 1.9rem;
+      text-align: left;
+    }
   }
 
   .cards-container {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
 
     @include responsive(md) {
-      grid-template-columns: repeat(3, 323px);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
     }
 
     @include responsive(lg) {
+      grid-template-columns: repeat(3, 323px);
       gap: 3rem;
     }
 
     .card {
-      width: 323px;
-      height: 439px;
+      width: 100%;
+      max-width: 323px;
+      height: auto;
       border: 3px solid;
       border-radius: 8px;
       overflow: hidden;
@@ -95,12 +102,10 @@
         }
 
         ul {
-          list-style: disc inside;
+          list-style: none;
           margin-bottom: 1rem;
           font-family: $font-secondary;
           color: $color-text-dark;
-          text-decoration-line: none !important;
-          list-style-type: none;
 
           li {
             margin-bottom: 0.25rem;

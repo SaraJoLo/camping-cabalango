@@ -42,6 +42,20 @@ const ImageCarousel: React.FC = () => {
     autoplaySpeed: 4000,
      prevArrow: <ArrowLeft />,
     nextArrow: <ArrowRight />,
+    responsive: [
+         {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+      },
+     },
+     {
+      breakpoint: 600, 
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    ],
   };
 
   return (

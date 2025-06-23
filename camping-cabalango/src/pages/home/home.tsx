@@ -19,6 +19,7 @@ import Map from '../../components/map/map';
 import Weather from '../../components/weather/weather';
 import InstagramFeed from '../../components/instagram/instagram-feed';
 import ImageCarousel from '../../components/imagecarousel/imagecarousel';
+import Cards from '../../components/cards/cards';
 
 const amenities = [
   { icon: <FontAwesomeIcon icon={faRecycle} />, label: "Sostenibilidad y reciclaje" },
@@ -80,12 +81,14 @@ const Home = () => {
    </section>
    <section className="instagram-section">
     <h3 className='instagram-title'>Viví el camping a través de Instagram</h3>
-      <InstagramFeed /> 
+      <InstagramFeed />
     </section>
-    <section className="services">
-</section>
-
-<ImageCarousel />
+    <section className="cards-section">
+    <Cards />
+    </section>
+    <section className="carousel-section">
+    <ImageCarousel />
+    </section>
   </section>
   );
 };

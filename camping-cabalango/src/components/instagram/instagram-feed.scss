@@ -9,7 +9,6 @@
   justify-content: center;
   align-items: center;
 
-
   iframe {
     max-width: 900px;
     margin: 0 auto;
@@ -20,27 +19,40 @@
       height: 600px;
     }
   }
+
   .instagram-button {
-  width: 15rem;
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  align-items: center;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-  color: $color-dark;
-  background-color: #C3C27B;
-  border-radius: 5px;
-  text-decoration: none;
+    width: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-dark;
+    background-color: #C3C27B;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 1rem;
 
-  .icon {
-    font-size: 1rem;
+    .icon {
+      font-size: 1rem;
+    }
+
+    .arrow {
+      font-size: 0.9rem;
+    }
   }
 
-  .arrow {
-    font-size: 0.9rem;
-  }
-}
+  @media (max-width: 768px) {
+    flex-direction: column;
 
+    .instagram-button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1rem;
+      height: 40px;
+      justify-content: center;
+    }
+  }
 }

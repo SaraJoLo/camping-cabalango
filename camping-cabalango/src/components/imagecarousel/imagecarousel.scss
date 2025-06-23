@@ -1,16 +1,14 @@
 @import '../../styles/global.scss';
 
+
 .carousel-container {
   width: 100%;
-  background-color: $color-dark;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 1200px; // limita ancho máximo para que no se estire demasiado en pantallas muy grandes
+  margin: 0 auto;
+  position: relative; // para que las flechas custom funcionen bien posicionadas
 
   .slick-slide {
-    display: flex !important; // slick usa display: block por defecto
+    display: flex !important;
     justify-content: center;
   }
 
@@ -19,9 +17,12 @@
     max-width: 400px;
     height: auto;
     margin: 0 auto;
-    padding: 0;
     border-radius: 8px;
     object-fit: cover;
+
+    @media (max-width: 600px) {
+      max-width: 90vw;
+    }
   }
 
   .slick-dots {
@@ -31,36 +32,40 @@
     justify-content: center;
     align-items: center;
   }
+
   .custom-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.8);
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    svg {
+      font-size: 1.5rem;
+
+      @media (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+    }
   }
 
-  svg {
-    font-size: 1.5rem;
+  .custom-arrow-left {
+    left: 10px;
   }
-}
 
-.custom-arrow-left {
-  left: 10px;
-}
-
-.custom-arrow-right {
-  right: 10px;
-}
-
+  .custom-arrow-right {
+    right: 10px;
+  }
 }

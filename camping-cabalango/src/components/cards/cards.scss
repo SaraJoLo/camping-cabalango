@@ -1,0 +1,81 @@
+@import '../../styles/global.scss';
+
+.servicios-cards {
+  background-color: $color-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+
+  .title {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-align: flex-start;
+    margin-bottom: 2rem;
+    font-family: $font-primary;
+    color: $color-dark;
+  }
+
+  .cards-container {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(3, 323px);
+    }
+
+    .card {
+      width: 323px;
+      height: 439px;
+      border: 3px solid;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: $color-light;
+
+      .img-wrapper {
+        position: relative;
+        height: 200px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.6;
+        }
+
+        h2 {
+          position: absolute;
+          bottom: 1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0, 0, 0, 0.4);
+          color: $color-light;
+          font-family: $font-primary;
+          font-size: 1.25rem;
+          padding: 0.5rem 1rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .card-content {
+        padding: 1rem;
+        ul {
+          list-style: disc inside;
+          list-style-type: none;
+          color: $color-text-dark;
+          font-family: $font-secondary;
+          padding-left: 0;
+          padding-right: 1rem;
+
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

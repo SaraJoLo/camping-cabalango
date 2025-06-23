@@ -1,5 +1,6 @@
 @import '../../styles/global.scss';
 
+
 .contacto-page {
   padding: 2rem;
   background-color: $color-light;
@@ -29,16 +30,19 @@
     }
   }
 
-   h1 {
+  h1 {
     font-size: 1.9rem;
     font-weight: 300;
     text-align: flex-start;
     margin-bottom: 2rem;
     font-family: $font-primary;
     color: $color-dark;
+    width: 100%;
+    max-width: 600px;
   }
 
-  .info-section {
+  .info-section,
+  .whatsapp-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -59,15 +63,6 @@
         font-size: 1.2rem;
       }
     }
-  }
-
-  .whatsapp-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-family: $font-secondary;
-    width: 100%;
-    max-width: 600px;
 
     label {
       font-size: 1rem;
@@ -92,8 +87,8 @@
     }
 
     .whatsapp-button {
-        width: 20rem;
-        height: 1.5rem;
+      width: 100%;
+      max-width: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -116,6 +111,36 @@
       &:hover {
         background: darken(#25d366, 10%);
       }
+    }
+  }
+
+  // RESPONSIVE STYLES
+  @include responsive(sm) {
+    padding: 1.5rem 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    .info-section,
+    .whatsapp-section {
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-button {
+      font-size: 0.95rem;
+      padding: 0.65rem 1.25rem;
+      width: 100%;
+    }
+
+    select {
+      font-size: 0.95rem;
+    }
+
+    .volverBtn {
+      font-size: 0.8rem;
     }
   }
 }

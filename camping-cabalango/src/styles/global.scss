@@ -1,13 +1,10 @@
-
-
-
 /* Reset */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Variables */
@@ -17,6 +14,7 @@ $color-dark: #272519;
 $color-text-dark: #000;
 $font-primary: 'Alegreya Sans SC', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
+$bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 
@@ -28,6 +26,9 @@ $bp-lg: 1024px;
 }
 
 @mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $bp-sm) { @content; }
+  }
   @if $breakpoint == md {
     @media (min-width: $bp-md) { @content; }
   }
@@ -50,8 +51,6 @@ html, body, #root {
 .mainContent {
   flex: 1;
 }
-
-
 
 h1 {
   font-size: 2.5rem;
