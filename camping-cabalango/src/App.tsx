@@ -11,18 +11,22 @@ import Alojamiento from './pages/alojamiento/aloja';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/origen' element={<Origen />} />
-        <Route path="/map" element={<Map />} />
-        <Route path="/alojar" element={<Alojamiento />} />
-        <Route path="/legal" element={<Legal />} />
-        <Route path="/terminoscondiciones" element={<TerminosCondiciones />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="appLayout">
+      <Router>
+        <Header />
+        <main className="mainContent">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/origen" element={<Origen />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/alojar" element={<Alojamiento />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/terminoscondiciones" element={<TerminosCondiciones />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

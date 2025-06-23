@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './aloja.scss';
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import ImgCabañas from '../../assets/img/alojar/cabañas/uno/IMG_0513.jpg';
 import ImgCampa from '../../assets/img/alojar/campa/IMG_9368.jpg';
@@ -11,11 +11,17 @@ import ImgCarpas from '../../assets/img/alojar/carpas/carpa1.jpg';
 interface BoxProps {
   title: string;
   imgSrc: string;
+  slug: string;
   children: React.ReactNode;
 }
 
-const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, children }) => {
+const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, slug, children }) => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`/alojamiento/${slug}`);
+  };
 
   return (
     <div className="alojaBox">
@@ -23,7 +29,14 @@ const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, children }) => {
         <img src={imgSrc} alt={title} className="alojaBoxImg" />
         <h2 className="alojaBoxTitle">{title}</h2>
       </div>
-      {open && <div className="alojaBoxContent">{children}</div>}
+      {open && (
+        <div className="alojaBoxContent">
+          {children}
+          <button className="verMasBtn" onClick={handleNavigate}>
+           <FaArrowRight />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -38,19 +51,53 @@ const Alojamiento: React.FC = () => {
         <p>Volver</p>
       </button>
 
-        <h1>ALOJAMIENTO</h1>
+      <h1>ALOJAMIENTO</h1>
+
       <section className="alojaBoxes">
-        <ContentBox title="Cabañas" imgSrc={ImgCabañas}>
-          <p>Descripción de las cabañas...</p>
+        <ContentBox title="Cabañas" imgSrc={ImgCabañas} slug="cabanas">
+          <ul>
+            <li>🏵luz, gas , agua</li>
+            <li>🏵desde 2 a 8 personas</li>
+            <li>🏵wifi</li>
+            <li>🏵cocina equipada (básico)</li>
+            <li>🏵duchas con agua caliente</li>
+            <li>🏵servicio de emergencia</li>
+            <li>🏵estacionamiento</li>
+            <li>🏵no incluye ropa de cama ni toallas</li>
+          </ul>
         </ContentBox>
-        <ContentBox title="Albergue de montaña" imgSrc={ImgCampa}>
-          <p>Descripción del albergue de montaña...</p>
+
+        <ContentBox title="Albergue de montaña" imgSrc={ImgCampa} slug="albergue">
+          <ul>
+            <li>🏵 albergue de montaña con capacidad para 80 personas</li>
+            <li>🏵Salón con capacidad para 400 personas cerrado con calefacción al leña.</li>
+            <li>🏵baños con agua caliente</li>
+            <li>🏵cocina industrial,con elementos de cocina industrial.</li>
+            <li>🏵servicio de comidas y desayunos a convenir.</li>
+            <li>🏵zona para acampar con toma corrientes,mesas,sillas,asadores con parrilla</li>
+            <li>🏵actividades recreativas( trekking,rapell, escalada)</li>
+            <li>🏵botiquin primeros auxilios</li>
+            <li>🏵Baños comunes</li>
+          </ul>
         </ContentBox>
-        <ContentBox title="Casillas" imgSrc={ImgCasillas}>
-          <p>Descripción de las casillas...</p>
+
+        <ContentBox title="Casillas" imgSrc={ImgCasillas} slug="casillas">
+          <ul>
+            <li>🏵Estilo camper</li>
+            <li>🏵desde 2 a 8 personas</li>
+            <li>🏵Conexión a electricidad</li>
+            <li>🏵servicio de emergencia</li>
+            <li>🏵Estacionamiento</li>
+          </ul>
         </ContentBox>
-        <ContentBox title="Carpas" imgSrc={ImgCarpas}>
-          <p>Descripción de las carpas...</p>
+
+        <ContentBox title="Carpas" imgSrc={ImgCarpas} slug="carpas">
+          <ul>
+            <li>🏵Zona de acampe</li>
+            <li>🏵Acceso a baños</li>
+            <li>🏵Sin reserva</li>
+            <li>🏵Para conectar con la naturaleza</li>
+          </ul>
         </ContentBox>
       </section>
     </main>
