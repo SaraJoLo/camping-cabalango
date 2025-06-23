@@ -18,6 +18,7 @@ import { PiTree } from 'react-icons/pi';
 import Map from '../../components/map/map';
 import Weather from '../../components/weather/weather';
 import InstagramFeed from '../../components/instagram/instagram-feed';
+import ImageCarousel from '../../components/imagecarousel/imagecarousel';
 
 const amenities = [
   { icon: <FontAwesomeIcon icon={faRecycle} />, label: "Sostenibilidad y reciclaje" },
@@ -81,6 +82,10 @@ const Home = () => {
     <h3 className='instagram-title'>Viví el camping a través de Instagram</h3>
       <InstagramFeed /> 
     </section>
+    <section className="services">
+</section>
+
+<ImageCarousel />
   </section>
   );
 };

@@ -3,7 +3,11 @@
 .instagram-feed {
   width: 100%;
   background-color: $color-light;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 
   iframe {
@@ -20,29 +24,22 @@
   width: 15rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  align-self: center;
   align-items: center;
-  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
-  padding: 0.2rem 0.6rem;
-  color: #000000;
+  color: $color-dark;
   background-color: #C3C27B;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
 
   .icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .arrow {
     font-size: 0.9rem;
-  }
-
-  &:hover {
-    background-color: dark(#ffe6ee, 10%);
   }
 }
 
