@@ -37,6 +37,7 @@ const Origen: React.FC = () => {
         <FaArrowLeft />
         <p>Volver</p>
       </button>
+      <h1>Origen</h1>
 
       <section className="origenBoxes">
         <ContentBox title="Historia" imgSrc={ImgUno}>

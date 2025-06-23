@@ -1,0 +1,121 @@
+@import '../../styles/global.scss';
+
+.contacto-page {
+  padding: 2rem;
+  background-color: $color-light;
+  color: $color-dark;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .volverBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: $color-dark;
+    font-size: 0.85rem;
+    font-family: $font-secondary;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+   h1 {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-align: flex-start;
+    margin-bottom: 2rem;
+    font-family: $font-primary;
+    color: $color-dark;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    font-family: $font-secondary;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 600px;
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      svg {
+        color: $color-dark;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .whatsapp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: $font-secondary;
+    width: 100%;
+    max-width: 600px;
+
+    label {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    select {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 1.5px solid $color-gray;
+      border-radius: 8px;
+      background: $color-light;
+      color: $color-text-dark;
+      width: 100%;
+      transition: border-color 0.2s;
+
+      &:focus {
+        outline: none;
+        border-color: $color-dark;
+      }
+    }
+
+    .whatsapp-button {
+        width: 20rem;
+        height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: #144526;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      .icon {
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        background: darken(#25d366, 10%);
+      }
+    }
+  }
+}
