@@ -3,9 +3,9 @@ import './aloja.scss';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-import ImgCabañas from '../../assets/img/alojar/cabañas/uno/IMG_0513.jpg';
-import ImgCampa from '../../assets/img/alojar/campa/IMG_9368.jpg';
-import ImgCasillas from '../../assets/img/alojar/casillas/IMG_9815.jpg';
+import ImgCabañas from '../../assets/img/alojar/cabañas/piedra/casapiedra1.jpg';
+import ImgCampa from '../../assets/img/alojar/campa/albergue2/IMG_9388.jpg';
+import ImgCasillas from '../../assets/img/alojar/casillas/IMG_9827.jpg';
 import ImgCarpas from '../../assets/img/alojar/carpas/carpa1.jpg';
 
 interface BoxProps {
@@ -13,36 +13,40 @@ interface BoxProps {
   imgSrc: string;
   slug: string;
   children: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, slug, children }) => {
-  const [open, setOpen] = useState(false);
+const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, slug, children, isOpen, onToggle }) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(`/alojamiento/${slug}`);
+    navigate(`/alojar/${slug}`);
   };
 
   return (
     <div className="alojaBox">
-      <div className="alojaBoxHeader" onClick={() => setOpen(prev => !prev)}>
+      <div className="alojaBoxHeader" onClick={onToggle}>
         <img src={imgSrc} alt={title} className="alojaBoxImg" />
         <h2 className="alojaBoxTitle">{title}</h2>
       </div>
-      {open && (
-        <div className="alojaBoxContent">
-          {children}
-          <button className="verMasBtn" onClick={handleNavigate}>
-           <FaArrowRight />
-          </button>
-        </div>
-      )}
+      <div className={`alojaBoxContent ${isOpen ? 'open' : ''}`}>
+        {children}
+        <button className="verMasBtn" onClick={handleNavigate}>
+          <FaArrowRight />
+        </button>
+      </div>
     </div>
   );
 };
 
 const Alojamiento: React.FC = () => {
   const navigate = useNavigate();
+  const [openBox, setOpenBox] = useState<string | null>(null);
+
+  const handleToggle = (slug: string) => {
+    setOpenBox(prev => (prev === slug ? null : slug));
+  };
 
   return (
     <main className="alojamiento">
@@ -54,49 +58,73 @@ const Alojamiento: React.FC = () => {
       <h1>ALOJAMIENTO</h1>
 
       <section className="alojaBoxes">
-        <ContentBox title="Cabañas" imgSrc={ImgCabañas} slug="cabanas">
+        <ContentBox
+          title="Cabañas"
+          imgSrc={ImgCabañas}
+          slug="cabañas"
+          isOpen={openBox === 'cabañas'}
+          onToggle={() => handleToggle('cabañas')}
+        >
           <ul>
-            <li>🏵luz, gas , agua</li>
-            <li>🏵desde 2 a 8 personas</li>
-            <li>🏵wifi</li>
-            <li>🏵cocina equipada (básico)</li>
-            <li>🏵duchas con agua caliente</li>
-            <li>🏵servicio de emergencia</li>
-            <li>🏵estacionamiento</li>
-            <li>🏵no incluye ropa de cama ni toallas</li>
+            <li>🏵 luz, gas , agua</li>
+            <li>🏵 desde 2 a 8 personas</li>
+            <li>🏵 wifi</li>
+            <li>🏵 cocina equipada (básico)</li>
+            <li>🏵 duchas con agua caliente</li>
+            <li>🏵 servicio de emergencia</li>
+            <li>🏵 estacionamiento</li>
+            <li>🏵 no incluye ropa de cama ni toallas</li>
           </ul>
         </ContentBox>
 
-        <ContentBox title="Albergue de montaña" imgSrc={ImgCampa} slug="albergue">
+        <ContentBox
+          title="Albergue de montaña"
+          imgSrc={ImgCampa}
+          slug="albergue"
+          isOpen={openBox === 'albergue'}
+          onToggle={() => handleToggle('albergue')}
+        >
           <ul>
             <li>🏵 albergue de montaña con capacidad para 80 personas</li>
-            <li>🏵Salón con capacidad para 400 personas cerrado con calefacción al leña.</li>
-            <li>🏵baños con agua caliente</li>
-            <li>🏵cocina industrial,con elementos de cocina industrial.</li>
-            <li>🏵servicio de comidas y desayunos a convenir.</li>
-            <li>🏵zona para acampar con toma corrientes,mesas,sillas,asadores con parrilla</li>
-            <li>🏵actividades recreativas( trekking,rapell, escalada)</li>
-            <li>🏵botiquin primeros auxilios</li>
-            <li>🏵Baños comunes</li>
+            <li>🏵 salón para 400 personas con calefacción</li>
+            <li>🏵 baños con agua caliente</li>
+            <li>🏵 cocina industrial equipada</li>
+            <li>🏵 comidas y desayunos a convenir</li>
+            <li>🏵 zona de acampar con mesas y parrillas</li>
+            <li>🏵 actividades recreativas</li>
+            <li>🏵 botiquín primeros auxilios</li>
+            <li>🏵 baños comunes</li>
           </ul>
         </ContentBox>
 
-        <ContentBox title="Casillas" imgSrc={ImgCasillas} slug="casillas">
+        <ContentBox
+          title="Casillas"
+          imgSrc={ImgCasillas}
+          slug="casillas"
+          isOpen={openBox === 'casillas'}
+          onToggle={() => handleToggle('casillas')}
+        >
           <ul>
-            <li>🏵Estilo camper</li>
-            <li>🏵desde 2 a 8 personas</li>
-            <li>🏵Conexión a electricidad</li>
-            <li>🏵servicio de emergencia</li>
-            <li>🏵Estacionamiento</li>
+            <li>🏵 estilo camper</li>
+            <li>🏵 desde 2 a 8 personas</li>
+            <li>🏵 conexión a electricidad</li>
+            <li>🏵 servicio de emergencia</li>
+            <li>🏵 estacionamiento</li>
           </ul>
         </ContentBox>
 
-        <ContentBox title="Carpas" imgSrc={ImgCarpas} slug="carpas">
+        <ContentBox
+          title="Carpas"
+          imgSrc={ImgCarpas}
+          slug="carpas"
+          isOpen={openBox === 'carpas'}
+          onToggle={() => handleToggle('carpas')}
+        >
           <ul>
-            <li>🏵Zona de acampe</li>
-            <li>🏵Acceso a baños</li>
-            <li>🏵Sin reserva</li>
-            <li>🏵Para conectar con la naturaleza</li>
+            <li>🏵 zona de acampe</li>
+            <li>🏵 acceso a baños</li>
+            <li>🏵 sin reserva</li>
+            <li>🏵 contacto con la naturaleza</li>
           </ul>
         </ContentBox>
       </section>

@@ -1,0 +1,103 @@
+@import "../../../styles/global.scss";
+
+.categoriaDetalle {
+  padding: 2rem;
+  width: 94%;
+
+
+
+  .volverBtn {
+    display: flex;
+    width: 5rem;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: $color-dark;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .categoriaTitulo {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-align: flex-start;
+    margin-bottom: 2rem;
+    font-family: $font-primary;
+    color: $color-dark;
+  }
+
+  .categoriaGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .categoriaCard {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+
+    img {
+      height: 150px;
+      border-radius: 8px;
+      cursor:context-menu;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .categoriaNombre {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: $color-dark;
+    font-family: $font-secondary;
+  }
+
+  .categoriaDesc {
+    font-size: 1rem;
+    color: $color-dark;
+    font-family: $font-secondary;
+
+  }
+
+  .zoomOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+
+    .zoomImg {
+      max-width: 40%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  }
+}
