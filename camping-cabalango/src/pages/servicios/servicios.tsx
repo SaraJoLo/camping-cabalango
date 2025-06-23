@@ -22,7 +22,7 @@ const serviciosData: Servicio[] = [
     title: 'Pasar el día',
     borderColor: 'rgba(230, 178, 92, 0.55)',
     imgSrc: Img1,
-    items: ['mesas, sillas, bancos y asadores', 'río con ollas y playa', 'proveeduría', 'baños c/ duchas', 'estacionamiento'],
+    items: ['🏵 Mesas, sillas, bancos', '🏵 Río con ollas y playa', '🏵 Proveeduría (temporada)', '🏵 Duchas con agua caliente', '🏵 Asadores con parrilla'],
     category: 'pasar-dia',
   },
   {
@@ -30,7 +30,7 @@ const serviciosData: Servicio[] = [
     title: 'Actividades recreativas',
     borderColor: 'rgba(195, 194, 123, 0.55)',
     imgSrc: Img2,
-    items: ['Trekking', 'Cabalgatas', 'Escalada', 'Cancha de Voley', 'Juegos para infancias'],
+    items: ['🏵 Trekking', '🏵 Cabalgatas', '🏵 Escalada', '🏵 Cancha de Voley', '🏵 Juegos para infancias'],
     category: 'actividades',
   },
   {
@@ -38,7 +38,7 @@ const serviciosData: Servicio[] = [
     title: 'Eventos',
     borderColor: 'rgba(236, 115, 115, 0.55)',
     imgSrc: Img3,
-    items: ['Casamientos', 'Cumpleaños', 'Salón de eventos(200 personas)', 'Talleres', 'Encuentros'],
+    items: ['🏵 Casamientos', '🏵 Cumpleaños', '🏵 Salón de eventos (200 personas)', '🏵 Talleres', '🏵 Encuentros'],
     category: 'eventos',
   },
 ];

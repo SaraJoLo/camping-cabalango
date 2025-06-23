@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './aloja.scss';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-
 import ImgCabañas from '../../assets/img/alojar/cabañas/piedra/casapiedra1.jpg';
 import ImgCampa from '../../assets/img/alojar/campa/albergue2/IMG_9388.jpg';
 import ImgCasillas from '../../assets/img/alojar/casillas/IMG_9827.jpg';
@@ -72,7 +71,7 @@ const Alojamiento: React.FC = () => {
             <li>🏵 cocina equipada (básico)</li>
             <li>🏵 duchas con agua caliente</li>
             <li>🏵 servicio de emergencia</li>
-            <li>🏵 estacionamiento</li>
+            <li>🏵 A 15' de Carlos Paz</li>
             <li>🏵 no incluye ropa de cama ni toallas</li>
           </ul>
         </ContentBox>
@@ -87,7 +86,8 @@ const Alojamiento: React.FC = () => {
           <ul>
             <li>🏵 albergue de montaña con capacidad para 80 personas</li>
             <li>🏵 salón para 200 personas con calefacción</li>
-            <li>🏵 baños con agua caliente</li>
+            <li>🏵 baños</li>
+            <li>🏵 duchas con agua caliente</li>
             <li>🏵 cocina industrial equipada</li>
             <li>🏵 comidas y desayunos a convenir</li>
             <li>🏵 zona de acampar con mesas y parrillas</li>
@@ -106,9 +106,9 @@ const Alojamiento: React.FC = () => {
           <ul>
             <li>🏵 estilo camper</li>
             <li>🏵 desde 2 a 8 personas</li>
-            <li>🏵 conexión a electricidad</li>
+            <li>🏵 toma corriente</li>
             <li>🏵 servicio de emergencia</li>
-            <li>🏵 estacionamiento</li>
+            <li>🏵 a 15' de Carlos Paz</li>
           </ul>
         </ContentBox>
 

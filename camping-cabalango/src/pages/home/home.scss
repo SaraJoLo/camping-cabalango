@@ -176,6 +176,7 @@
 
   .location-content {
      display: flex;
+     flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -188,6 +189,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     overflow: hidden;
+    font-size: 0.8rem;
+    padding: 0.4rem;
 
     @include responsive(md) {
       flex: 1 1 400px;
@@ -208,7 +211,7 @@
   font-weight: 300;
   font-family: $font-primary;
   color: $color-dark;
-  text-align: center;
+  text-align: start;
   background-color: $color-light;
   padding: 1rem;
 

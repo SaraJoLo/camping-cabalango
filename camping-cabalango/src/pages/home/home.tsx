@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faWifi,
   faPaw,
-  faCar,
+  faRoute,
   faRecycle,
   faUtensils,
   faCampground,
   faPersonSwimming,
-  faStar,
+  faTableTennisPaddleBall,
   faHotel,
   faPersonHiking,
 } from '@fortawesome/free-solid-svg-icons';
@@ -23,15 +23,15 @@ import Cards from '../../components/cards/cards';
 
 const amenities = [
   { icon: <FontAwesomeIcon icon={faRecycle} />, label: "Sostenibilidad y reciclaje" },
-  { icon: <FontAwesomeIcon icon={faWifi} />, label: "Wi-Fi" },
-  { icon: <FontAwesomeIcon icon={faCar} />, label: "Estacionamiento" },
-  { icon: <FontAwesomeIcon icon={faPaw} />, label: "Admite mascotas (con correa)" },
-  { icon: <GiBarbecue />, label: "Zona de barbacoa" },
-  { icon: <FontAwesomeIcon icon={faUtensils} />, label: "Mesas, sillas y bancos" },
+  { icon: <FontAwesomeIcon icon={faWifi} />, label: "Zona Wi-Fi" },
   { icon: <FontAwesomeIcon icon={faCampground} />, label: "Espacio para acampar" },
+  { icon: <FontAwesomeIcon icon={faRoute} />, label: "A 15 min. de Villa Carlos Paz" },
+  { icon: <FontAwesomeIcon icon={faUtensils} />, label: "Mesas, sillas y bancos" },
+  { icon: <FontAwesomeIcon icon={faPaw} />, label: "Admite mascotas (con correa)" },
+  { icon: <GiBarbecue />, label: "Asadores con parrilla" },
   { icon: <PiTree/>, label : "Áreas verdes y sombra" },
   { icon: <FontAwesomeIcon icon={faPersonSwimming} />, label: "Río con ollas y playa" },
-  { icon: <FontAwesomeIcon icon={faStar} />, label: "Luz de noche" },
+  { icon: <FontAwesomeIcon icon={faTableTennisPaddleBall} />, label: "Pool, metegol y ping-pong" },
   { icon: <FontAwesomeIcon icon={faHotel} />, label: "Albergue de montaña" },
   { icon: <FontAwesomeIcon icon={faPersonHiking} />, label: "Actividades recreativas" },
 ];
@@ -68,19 +68,19 @@ const Home = () => {
           </div>
       </section>
       <section className="location-info">
-  <div className="location-content">
     <h3> ¿CÓMO LLEGAR?</h3>
+  <div className="location-content">
     <div className="location-map">
       <Map />
-      <p> A 40 minutos de Villa Carlos Paz. Colectivo directo desde la Terminal de Omnibus de Córdoba.</p>
+      <p> A 40 minutos de Córdoba Capital (Colectivo directo desde la Terminal de Omnibus de Córdoba) y 15' desde Villa Carlos Paz.</p>
     </div>
     <div className="location-weather">
       <Weather />
       </div>
      </div>
    </section>
-   <section className="instagram-section">
     <h3 className='instagram-title'>Viví el camping a través de Instagram</h3>
+   <section className="instagram-section">
       <InstagramFeed />
     </section>
     <section className="cards-section">

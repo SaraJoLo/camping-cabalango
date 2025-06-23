@@ -41,7 +41,7 @@ const Origen: React.FC = () => {
 
       <section className="origenBoxes">
         <ContentBox title="Historia" imgSrc={ImgUno}>
-          <p>El Camping Cabalango es un emprendimiento familiar emprendido en el año 1983 es decir que hace 42 años que estamos funcionando sin interrupción y atendido por sus propios dueños: la familia Losada. <br></br><br></br>
+          <p>El Camping Cabalango es un emprendimiento familiar gestado en el año 1983 es decir que hace 42 años que estamos funcionando sin interrupción y atendido por sus propios dueños: la familia Losada-Weht. <br></br><br></br>
 La idea de un camping surgió sin querer, porque nuestra intención era comprar un terreno en las sierras para hacer nuestra propia casa de campo. <br></br><br></br>
 Afortunadamente encontramos este maravilloso lugar con este río inigualable que fué sede de un asentamiento de Comechingones, por lo que hay en la zona y en el mismo lote restos arqueológicos de ellos , aquí vivieron 800 años.<br></br><br></br>
 <br></br>

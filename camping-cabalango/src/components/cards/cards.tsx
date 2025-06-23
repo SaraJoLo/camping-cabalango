@@ -16,20 +16,20 @@ interface Servicio {
 const serviciosData: Servicio[] = [
   {
     id: 1,
-    title: 'Para pasar el día',
+    title: 'Pasar el día',
     borderColor: 'rgba(230, 178, 92, 0.55)',
     imgSrc: Img1,
     items: [
-      '🏵Mesas, sillas, bancos y asadores',
-      '🏵Río con ollas y playa',
-      '🏵Proveeduría',
-      '🏵Baños con duchas',
-      '🏵Estacionamiento',
+      '🏵 Mesas, sillas, bancos y asadores',
+      '🏵 Río con ollas y playa',
+      '🏵 Proveeduría',
+      '🏵 Baños con duchas',
+      '🏵 Estacionamiento',
     ],
   },
   {
     id: 2,
-    title: 'Actividades recreativas',
+    title: 'Campamentos',
     borderColor: 'rgba(195, 194, 123, 0.55)',
     imgSrc: Img2,
     items: [
@@ -46,11 +46,11 @@ const serviciosData: Servicio[] = [
     borderColor: 'rgba(236, 115, 115, 0.55)',
     imgSrc: Img3,
     items: [
-      '🏵Casamientos',
-      '🏵Cumpleaños',
-      '🏵Salón de eventos (200 personas)',
-      '🏵Talleres',
-      '🏵Encuentros',
+      '🏵 Casamientos',
+      '🏵 Cumpleaños',
+      '🏵 Salón de eventos (400 personas)',
+      '🏵 Talleres',
+      '🏵 Encuentros',
     ],
   },
 ];
