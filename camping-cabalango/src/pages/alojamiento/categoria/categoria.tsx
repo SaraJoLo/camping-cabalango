@@ -80,7 +80,7 @@ const data: Record<string, Item[]> = {
     },
     {
       title: 'Cabaña Dos',
-      description: 'Perfecta para una escapada de relax.',
+      description: 'Para 4 5 personas ideal para unos dias en familia.',
       images: [ImgCabDos1, ImgCabDos2, ImgCabDos3, ImgCabDos4, ImgCabDos5],
     },
     {
@@ -97,46 +97,46 @@ const data: Record<string, Item[]> = {
     },
     {
       title: 'Casilla Molle',
-      description: 'Espaciosa y con todas las comodidades.',
+      description: 'Para 4 personas, al lado cuenta con mesa, sillas, asador con parrilla.',
       images: [Casilla4, Casilla5],
     },
     {
       title: 'Salón del Camping',
-      description: 'Rústica y con encanto natural.',
+      description: 'Espacio común. En temporada cuenta con comedor, proveeduría y juegos para toda la familia.',
       images: [CarpaSalon1, CarpaSalon2, CarpaSalon3, CarpaSalon4],
     },
   ],
   carpas: [
     {
-      title: 'Camping Bosque',
-      description: 'Ideal para campamentos en grupo.',
+      title: 'Camping',
+      description: 'El Camping cuenta con amplio espacio para acampe, cuenta con postes de luz y toma corriente. No es necesario reservar, se puede venir directamente.',
       images: [Carpa1, Carpa2, Carpa3, Carpa4],
     },
     {
       title: 'Salón Tinglado',
-      description: 'Ecológica y resistente al clima.',
+      description: 'Espacio común. En temporada cuenta con comedor, proveeduría y juegos para toda la familia.',
       images: [CarpaSalon1, CarpaSalon2, CarpaSalon3, CarpaSalon4],
     },
     {
-      title: 'Predio para Acampar',
-      description: 'Amplia, para toda la familia.',
+      title: 'Río Los Chorrillos',
+      description: 'El río cuenta con dos bajadas. Tiene ollas y playas para disfrutar de un buen día de sol y agua.',
       images: [Predio1, Predio2, Predio3],
     },
   ],
   albergue: [
     {
-      title: 'Grupos Grandes',
-      description: 'Ideal para familias y grupos grandes.',
+      title: 'Albergue de Montaña 1',
+      description: 'Ideal para campamentos. 40 cuchetas, cocina industrial con asadores y baños. Al lado cuenta con un predio verde para realizar actividades de todo tipo.',
       images: [CampaUno1, CampaUno2, CampaUno3, CampaUno4, CampaUno5, CampaUno6, CampaUno7],
     },
     {
-      title: 'Segundo Albergue',
-      description: 'Para los amantes de la naturaleza.',
+      title: 'Albergue de Montaña 2',
+      description: 'Dos plantas con 40 cuchetas un horno, mas cercano al río y salon de usos múltiples.',
       images: [CampaDos1, CampaDos2, CampaDos3, CampaDos4, CampaDos5, CampaDos6, CampaDos7, CampaDos8, CampaDos9],
     },
     {
       title: 'Actividades Recreativas',
-      description: 'Un espacio tranquilo para desconectar.',
+      description: 'Trekking, fogones, rapel, escalada y más..',
       images: [Act1, Act2, Act3, Act4, Act5],
     },
   ],

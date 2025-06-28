@@ -71,7 +71,6 @@ const Alojamiento: React.FC = () => {
             <li>🏵 cocina equipada (básico)</li>
             <li>🏵 duchas con agua caliente</li>
             <li>🏵 servicio de emergencia</li>
-            <li>🏵 A 15' de Carlos Paz</li>
             <li>🏵 no incluye ropa de cama ni toallas</li>
           </ul>
         </ContentBox>
@@ -108,7 +107,6 @@ const Alojamiento: React.FC = () => {
             <li>🏵 desde 2 a 8 personas</li>
             <li>🏵 toma corriente</li>
             <li>🏵 servicio de emergencia</li>
-            <li>🏵 a 15' de Carlos Paz</li>
           </ul>
         </ContentBox>
 
@@ -123,7 +121,7 @@ const Alojamiento: React.FC = () => {
             <li>🏵 zona de acampe</li>
             <li>🏵 acceso a baños</li>
             <li>🏵 sin reserva</li>
-            <li>🏵 contacto con la naturaleza</li>
+            <li>🏵 bajada directa al Río Los Chorrillos</li>
           </ul>
         </ContentBox>
       </section>

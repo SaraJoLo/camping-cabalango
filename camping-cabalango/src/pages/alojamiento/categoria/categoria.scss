@@ -2,9 +2,11 @@
 
 .categoriaDetalle {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
   width: 94%;
-  max-width: 1200px;  // Evita que se pase del contenedor principal
-  margin: 0 auto;     // Centra el contenedor
+  max-width: 1200px; 
+  margin: 0 auto;   
 
   .volverBtn {
     display: flex;
@@ -34,9 +36,9 @@
   }
 
   .categoriaGrid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    grid-template-columns: 1fr;
 
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
