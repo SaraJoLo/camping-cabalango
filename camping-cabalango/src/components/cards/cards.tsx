@@ -3,7 +3,7 @@ import React from 'react';
 import './cards.scss';
 import Img1 from '../../assets/img/camping/salon/hori2.jpg';
 import Img2 from '../../assets/img/alojar/campa/albergue2/IMG_9388.jpg';
-import Img3 from '../../assets/img/camping/entrar.png';
+import Img3 from '../../assets/img/camping/salon/4324324.jpg';
 
 interface Servicio {
   id: number;
@@ -21,6 +21,8 @@ const serviciosData: Servicio[] = [
     imgSrc: Img1,
     items: [
       '🏵 Mesas, sillas, bancos y asadores',
+      '🏵 Asadores con parilla',
+      '🏵 Zona Wi-Fi',
       '🏵 Río con ollas y playa',
       '🏵 Proveeduría',
       '🏵 Baños con duchas',
@@ -34,10 +36,10 @@ const serviciosData: Servicio[] = [
     imgSrc: Img2,
     items: [
       '🏵 Albergue de montaña p/ 80 personas',
+      '🏵 Zona de acampar con mesas y parrillas',
       '🏵 Cocina industrial equipada',
       '🏵 Actividades recreativas',
       '🏵 Baños con agua caliente',
-      '🏵 Zona de acampar con mesas y parrillas',
     ],
   },
   {
@@ -46,9 +48,9 @@ const serviciosData: Servicio[] = [
     borderColor: 'rgba(236, 115, 115, 0.55)',
     imgSrc: Img3,
     items: [
+      '🏵 Salón de eventos (400 personas)',
       '🏵 Casamientos',
       '🏵 Cumpleaños',
-      '🏵 Salón de eventos (400 personas)',
       '🏵 Talleres',
       '🏵 Encuentros',
     ],

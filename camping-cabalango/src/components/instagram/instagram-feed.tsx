@@ -30,7 +30,7 @@ const InstagramFeed = () => {
          className="instagram-button"
         >
        <FontAwesomeIcon icon={faInstagram} className="icon" />
-          Ver más en Instagram
+          Ver más
         <FontAwesomeIcon icon={faArrowRight} className="arrow" />
       </a>
 
