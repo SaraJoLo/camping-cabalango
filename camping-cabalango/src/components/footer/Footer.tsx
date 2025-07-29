@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import campingLogo from '../../assets/icons/logo_marron.png';
 import './footer.scss';
-import { FaWhatsapp, FaEnvelope, FaHeart, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaHeart, FaInstagram, FaFacebook, FaMapMarked } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
@@ -26,6 +26,11 @@ const Footer: React.FC = () => {
           <li>
             <a href="mailto:info@tusitio.com" aria-label="Correo electrónico">
               <FaEnvelope size={30} />
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/phnRhdwEHN8p3qqF9" target="_blank" rel="noopener noreferrer" aria-label="Ubicación">
+              <FaMapMarked size={30} />
             </a>
           </li>
         </ul>
