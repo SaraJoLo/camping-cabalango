@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './servicios.scss';
 import CarouselModal from '../../components/carrousel/carrousel.tsx';
 import { FaArrowLeft } from 'react-icons/fa';
-import Img1 from '../../assets/img/camping/salon/112.jpg';
+import Img1 from '../../assets/img/camping/7686.jpg';
 import Img2 from '../../assets/img/actividades/324324234324.jpg';
 import Img3 from '../../assets/img/servicios/eventos/54.jpg';
 

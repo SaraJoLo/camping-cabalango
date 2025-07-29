@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 1200px; // limita ancho máximo para que no se estire demasiado en pantallas muy grandes
   margin: 0 auto;
-  position: relative; // para que las flechas custom funcionen bien posicionadas
+  position: relative; 
 
   .slick-slide {
     display: flex !important;

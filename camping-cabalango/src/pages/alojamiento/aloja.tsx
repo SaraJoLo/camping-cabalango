@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './aloja.scss';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import ImgCabañas from '../../assets/img/alojar/cabañas/piedra/casapiedra1.jpg';
 import ImgCampa from '../../assets/img/alojar/campa/albergue2/IMG_9388.jpg';
 import ImgCasillas from '../../assets/img/alojar/casillas/IMG_9827.jpg';
 import ImgCarpas from '../../assets/img/alojar/carpas/carpa1.jpg';
@@ -57,23 +56,7 @@ const Alojamiento: React.FC = () => {
       <h1>ALOJAMIENTO</h1>
 
       <section className="alojaBoxes">
-        <ContentBox
-          title="Cabañas"
-          imgSrc={ImgCabañas}
-          slug="cabañas"
-          isOpen={openBox === 'cabañas'}
-          onToggle={() => handleToggle('cabañas')}
-        >
-          <ul>
-            <li>🏵 luz, gas , agua</li>
-            <li>🏵 desde 2 a 8 personas</li>
-            <li>🏵 wifi</li>
-            <li>🏵 cocina equipada (básico)</li>
-            <li>🏵 duchas con agua caliente</li>
-            <li>🏵 servicio de emergencia</li>
-            <li>🏵 no incluye ropa de cama ni toallas</li>
-          </ul>
-        </ContentBox>
+        
 
         <ContentBox
           title="Albergue de montaña"

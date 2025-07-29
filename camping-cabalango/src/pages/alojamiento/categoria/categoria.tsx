@@ -3,26 +3,25 @@ import { useState } from 'react';
 import './categoria.scss';
 import { FaArrowLeft } from 'react-icons/fa';
 
-import ImgCabUno1 from '../../../assets/img/alojar/cabañas/uno/20230216_115034720.jpg';
-import ImgCabUno2 from '../../../assets/img/alojar/cabañas/uno/IMG_0513.jpg';
-import ImgCabUno3 from '../../../assets/img/alojar/cabañas/uno/IMG_0515.jpg';
-import ImgCabUno4 from '../../../assets/img/alojar/cabañas/uno/IMG_0516.jpg';
+//import ImgCabUno1 from '../../../assets/img/alojar/cabañas/uno/20230216_115034720.jpg';
+//import ImgCabUno2 from '../../../assets/img/alojar/cabañas/uno/IMG_0513.jpg';
+//import ImgCabUno3 from '../../../assets/img/alojar/cabañas/uno/IMG_0515.jpg';
+//import ImgCabUno4 from '../../../assets/img/alojar/cabañas/uno/IMG_0516.jpg';
 
-import ImgCabDos1 from '../../../assets/img/alojar/cabañas/dos/20230216_114343002.jpg';
-import ImgCabDos2 from '../../../assets/img/alojar/cabañas/dos/20230216_114503092.jpg';
-import ImgCabDos3 from '../../../assets/img/alojar/cabañas/dos/cabanaa1.jpg';
-import ImgCabDos4 from '../../../assets/img/alojar/cabañas/dos/extracab1.jpg';
-import ImgCabDos5 from '../../../assets/img/alojar/cabañas/dos/extracab27.jpg';
+//import ImgCabDos1 from '../../../assets/img/alojar/cabañas/dos/20230216_114343002.jpg';
+//import ImgCabDos2 from '../../../assets/img/alojar/cabañas/dos/20230216_114503092.jpg';
+//import ImgCabDos3 from '../../../assets/img/alojar/cabañas/dos/cabanaa1.jpg';
+//import ImgCabDos4 from '../../../assets/img/alojar/cabañas/dos/extracab1.jpg';
+//import ImgCabDos5 from '../../../assets/img/alojar/cabañas/dos/extracab27.jpg';
 
-import ImgPepe1 from '../../../assets/img/alojar/cabañas/pepe/casapepe1.jpg';
-import ImgPepe2 from '../../../assets/img/alojar/cabañas/pepe/casapepe2.jpg';
-import ImgPepe3 from '../../../assets/img/alojar/cabañas/pepe/casapepe3.jpg';
-import ImgPepe4 from '../../../assets/img/alojar/cabañas/pepe/casapepe4.jpg';
-import ImgPepe5 from '../../../assets/img/alojar/cabañas/pepe/casapepe5.jpg';
+//import ImgPepe1 from '../../../assets/img/alojar/cabañas/pepe/casapepe1.jpg';
+//import ImgPepe2 from '../../../assets/img/alojar/cabañas/pepe/casapepe2.jpg';
+//import ImgPepe3 from '../../../assets/img/alojar/cabañas/pepe/casapepe3.jpg';
+//import ImgPepe4 from '../../../assets/img/alojar/cabañas/pepe/casapepe4.jpg';
+//import ImgPepe5 from '../../../assets/img/alojar/cabañas/pepe/casapepe5.jpg';
 
 import CampaUno1 from '../../../assets/img/alojar/campa/albergue1/IMG_9364.jpg';
 import CampaUno2 from '../../../assets/img/alojar/campa/albergue1/IMG_9366.jpg';
-import CampaUno3 from '../../../assets/img/alojar/campa/albergue1/IMG_9367.jpg';
 import CampaUno4 from '../../../assets/img/alojar/campa/albergue1/IMG_9368.jpg';
 import CampaUno5 from '../../../assets/img/alojar/campa/albergue1/IMG_9371.jpg';
 import CampaUno6 from '../../../assets/img/alojar/campa/albergue1/IMG_9375.jpg';
@@ -38,10 +37,10 @@ import CampaDos7 from '../../../assets/img/alojar/campa/albergue2/IMG_9400.jpg';
 import CampaDos8 from '../../../assets/img/alojar/campa/albergue2/IMG_9402.jpg';
 import CampaDos9 from '../../../assets/img/alojar/campa/albergue2/IMG_9404.jpg';
 
-import Carpa1 from '../../../assets/img/alojar/carpas/carpa1.jpg';
+/*import Carpa1 from '../../../assets/img/alojar/carpas/carpa1.jpg';
 import Carpa2 from '../../../assets/img/alojar/carpas/carpa3.jpg';
 import Carpa3 from '../../../assets/img/alojar/carpas/carpa7.jpg';
-import Carpa4 from '../../../assets/img/alojar/carpas/carpa8.jpg';
+import Carpa4 from '../../../assets/img/alojar/carpas/carpa8.jpg';*/
 
 import CarpaSalon1 from '../../../assets/img/camping/salon/112.jpg';
 import CarpaSalon2 from '../../../assets/img/camping/salon/11232312.jpg';
@@ -49,7 +48,6 @@ import CarpaSalon3 from '../../../assets/img/camping/salon/324234.jpg';
 import CarpaSalon4 from '../../../assets/img/camping/salon/5464.jpg';
 
 import Predio1 from '../../../assets/img/camping/carpa4.jpg';
-import Predio2 from '../../../assets/img/camping/carpa5.jpg';
 import Predio3 from '../../../assets/img/camping/sillas.jpg';
 
 import Act1 from '../../../assets/img/camping/7567.jpg';
@@ -72,23 +70,23 @@ interface Item {
 }
 
 const data: Record<string, Item[]> = {
-  cabañas: [
-    {
-      title: 'Cabaña Uno',
-      description: 'Ideal para familias y grupos grandes.',
-      images: [ImgCabUno1, ImgCabUno2, ImgCabUno3, ImgCabUno4],
-    },
-    {
-      title: 'Cabaña Dos',
-      description: 'Para 4 5 personas ideal para unos dias en familia.',
-      images: [ImgCabDos1, ImgCabDos2, ImgCabDos3, ImgCabDos4, ImgCabDos5],
-    },
-    {
-      title: 'Cabaña Pepe',
-      description: 'Con vistas al río y senderos cercanos.',
-      images: [ImgPepe1, ImgPepe2, ImgPepe3, ImgPepe4, ImgPepe5],
-    },
-  ],
+ // cabañas: [
+   // {
+     // title: 'Cabaña Uno',
+      //description: 'Ideal para familias y grupos de 3/4 personas. Tiene una cama doble, una cucheta y un sillón. Cocina con lo básico y heladera.',
+      //images: [ImgCabUno1, ImgCabUno2, ImgCabUno3, ImgCabUno4],
+    //},
+    //{
+      //title: 'Cabaña Dos',
+      //description: 'Para 4 a 5 personas, ideal para unos días en familia. Tiene una cama doble',
+     // images: [ImgCabDos1, ImgCabDos2, ImgCabDos3, ImgCabDos4, ImgCabDos5],
+    //},
+    //{
+      //title: 'Cabaña Edgar',
+      //description: 'Para 5/6 personas. Con asador, galería y cocina equipada.',
+      //images: [ImgPepe1, ImgPepe2, ImgPepe3, ImgPepe4, ImgPepe5],
+    //},
+  //],
   casillas: [
     {
       title: 'Casilla Cieri',
@@ -110,7 +108,7 @@ const data: Record<string, Item[]> = {
     {
       title: 'Camping',
       description: 'El Camping cuenta con amplio espacio para acampe, cuenta con postes de luz y toma corriente. No es necesario reservar, se puede venir directamente.',
-      images: [Carpa1, Carpa2, Carpa3, Carpa4],
+      images: [Predio1, Predio3],
     },
     {
       title: 'Salón Tinglado',
@@ -120,14 +118,14 @@ const data: Record<string, Item[]> = {
     {
       title: 'Río Los Chorrillos',
       description: 'El río cuenta con dos bajadas. Tiene ollas y playas para disfrutar de un buen día de sol y agua.',
-      images: [Predio1, Predio2, Predio3],
+      images: [Predio1, Predio3],
     },
   ],
   albergue: [
     {
       title: 'Albergue de Montaña 1',
       description: 'Ideal para campamentos. 40 cuchetas, cocina industrial con asadores y baños. Al lado cuenta con un predio verde para realizar actividades de todo tipo.',
-      images: [CampaUno1, CampaUno2, CampaUno3, CampaUno4, CampaUno5, CampaUno6, CampaUno7],
+      images: [CampaUno1, CampaUno2, CampaUno4, CampaUno5, CampaUno6, CampaUno7],
     },
     {
       title: 'Albergue de Montaña 2',
