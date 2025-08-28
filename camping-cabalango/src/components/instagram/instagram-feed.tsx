@@ -24,13 +24,12 @@ const InstagramFeed = () => {
         style={{ width: '100%', border: 0, overflow: 'hidden' }}
       ></iframe>
       <a
-         href="https://www.https://www.instagram.com/campingcabalango/"
+         href="https://www.instagram.com/campingcabalango/"
          target="_blank"
          rel="noopener noreferrer"
          className="instagram-button"
         >
        <FontAwesomeIcon icon={faInstagram} className="icon" />
-          Ver más
         <FontAwesomeIcon icon={faArrowRight} className="arrow" />
       </a>
 
