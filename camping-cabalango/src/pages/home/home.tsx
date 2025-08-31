@@ -41,6 +41,18 @@ const Home = () => {
   return (
     <section className="home">
       <section className="home__hero">
+        <div className="home__video">
+          <video
+            src='/RioChicas4.mp4'
+            autoPlay
+            loop
+            muted
+            preload="auto"
+            playsInline
+            className="home__mp4"
+          />
+           <div className="home__video-overlay"></div>
+        </div>
          <div className="home__content">
           <h1>Camping Cabalango</h1>
           <p className="subtitle">
@@ -48,16 +60,7 @@ const Home = () => {
           </p>
           <a href="tel:+54 9 3541 54-8342" className="home__btn">3541 54-8342</a>
         </div>
-        <div className="home__video">
-          <video
-            src='/RioChicas2.MP4'
-            autoPlay
-            loop
-            muted
-            preload="auto"
-          >
-          </video>
-        </div>
+        
       </section>
       <section className="services">
           <div className="icon-section">
