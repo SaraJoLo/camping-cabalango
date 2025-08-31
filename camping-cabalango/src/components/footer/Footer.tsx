@@ -5,7 +5,6 @@ import "./footer.scss";
 import {
   FaWhatsapp,
   FaEnvelope,
-  FaHeart,
   FaInstagram,
   FaFacebook,
   FaMapMarked,
@@ -57,12 +56,12 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="WhatsApp"
             >
-              <FaWhatsapp size={30} />
+              <FaWhatsapp size={20} />
             </a>
           </li>
           <li>
             <a href="mailto:info@tusitio.com" aria-label="Correo electrónico">
-              <FaEnvelope size={30} />
+              <FaEnvelope size={20} />
             </a>
           </li>
           <li>
@@ -72,7 +71,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Ubicación"
             >
-              <FaMapMarked size={30} />
+              <FaMapMarked size={20} />
             </a>
           </li>
         </ul>
@@ -82,16 +81,13 @@ const Footer: React.FC = () => {
         <p>Seguinos en nuestras redes para ver la experiencia!</p>
         <ul className="footerIcons">
           <li>
-            <FaHeart size={30} aria-hidden="true" />
-          </li>
-          <li>
             <a
               href="https://www.instagram.com/campingcabalango"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <FaInstagram size={30} />
+              <FaInstagram size={20} />
             </a>
           </li>
           <li>
@@ -101,11 +97,8 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <FaFacebook size={30} />
+              <FaFacebook size={20} />
             </a>
-          </li>
-          <li>
-            <FaHeart size={30} aria-hidden="true" />
           </li>
         </ul>
       </div>

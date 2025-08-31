@@ -1,7 +1,7 @@
 
 const TerminosCondiciones = () => {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+    <main className="terminos-condiciones">
       <h1>Términos y Condiciones</h1>
 
       <h2>1. Aceptación de los Términos</h2>

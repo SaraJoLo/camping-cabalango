@@ -1,0 +1,22 @@
+@import '../../styles/global.scss';
+
+.terminos-condiciones {
+  padding: 2rem;
+  font-family: sans-serif;
+  color: $color-dark !important;
+
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
