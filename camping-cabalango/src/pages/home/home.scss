@@ -1,79 +1,75 @@
 @import '../../styles/global.scss';
 
 .home {
-   &__hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
 
-  &__video {
-   position: absolute;
-    inset: 0;
-    z-index: 0;
-
-    &-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .home__mp4 {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: relative;
-      z-index: 0;
-    }
-  }
-
-
-  &__content {
-    position: relative;
+  &__hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    color: $color-light;
-    text-align: left;
+    background-color: $color-dark;
 
-   h1 {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 6rem !important;
-    margin: 0.5rem 0;
-    font-weight: 400;
-    color: white;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.10);
     @include responsive(md) {
-      font-size: 2.5rem;
+      flex-direction: row;
+      align-items: stretch;
     }
   }
 
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  &__image {
+    flex: 1;
 
-    @include responsive(md) {
-      font-size: 1.25rem;
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 33.6rem;
+      object-fit: cover;
+      display: block;
     }
-    }
-    .home__btn {
-      font-size: 1.2rem;
-       background-color: rgba(255, 255, 255, 0.7);
-       color: #333;
-       padding: 0.5rem 1rem;
-       border-radius: 4px;
-       font-weight: 400;
-       text-align: center;
-       z-index: 1;
+  }
+
+  &__content {
+    flex: 1;
+    background-color: $color-dark;
+    color: $color-light;
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: white;
+      margin-left: 0;
+
+      @include responsive(md) {
+        font-size: 2.5rem;
       }
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+
+      @include responsive(md) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .home__btn {
+      background-color: $color-light;
+      font-family: 'Montserrat', sans-serif;
+      color: $color-dark;
+      padding: 0.5rem 2rem;
+      border-radius: 3px;
+      font-weight: 400;
+      text-align: center;
+      width: fit-content;
+      font-size: 1rem;
+    }
   }
 
   &__alojamiento {
@@ -92,6 +88,7 @@
       }
     }
   }
+}
 
 .services {
   width: 100%;
@@ -227,4 +224,5 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}}
+}
+

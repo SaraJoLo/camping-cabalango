@@ -1,4 +1,5 @@
 import './home.scss';
+import campingImg from '../../assets/img/camping/1111.jpg';
 import { GiBarbecue } from 'react-icons/gi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -41,18 +42,6 @@ const Home = () => {
   return (
     <section className="home">
       <section className="home__hero">
-        <div className="home__video">
-          <video
-            src='/RioChicas4.mp4'
-            autoPlay
-            loop
-            muted
-            preload="auto"
-            playsInline
-            className="home__mp4"
-          />
-           <div className="home__video-overlay"></div>
-        </div>
          <div className="home__content">
           <h1>Camping Cabalango</h1>
           <p className="subtitle">
@@ -60,7 +49,9 @@ const Home = () => {
           </p>
           <a href="tel:+54 9 3541 54-8342" className="home__btn">3541 54-8342</a>
         </div>
-        
+        <div className="home__image">
+          <img src={campingImg} alt="Vista del camping Cabalango" />
+        </div>
       </section>
       <section className="services">
           <div className="icon-section">
@@ -79,14 +70,14 @@ const Home = () => {
       <section className="location-info">
     <h3> ¿CÓMO LLEGAR?</h3>
   <div className="location-content">
-     <div className="location-map">
-       <Map />
-       <p> A 40 minutos de Córdoba Capital (Colectivo directo desde la Terminal de Omnibus de Córdoba) y 15' desde Villa Carlos Paz.</p>
-      </div>
-      <div className="location-weather">
-        <Weather />
-      </div>
+    <div className="location-map">
+      <Map />
+      <p> A 40 minutos de Córdoba Capital (Colectivo directo desde la Terminal de Omnibus de Córdoba) y 15' desde Villa Carlos Paz.</p>
     </div>
+    <div className="location-weather">
+      <Weather />
+      </div>
+     </div>
    </section>
     <h3 className='instagram-title'>Viví el camping a través de Instagram</h3>
    <section className="instagram-section">
