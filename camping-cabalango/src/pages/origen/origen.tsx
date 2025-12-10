@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import BtnBack from '../../components/btnback/btnback';
 import ImgUno from '../../assets/img/camping/888.jpg';
 import ImgDos from '../../assets/img/camping/4845876.jpg';
 import ImgTres from '../../assets/img/camping/9889.jpg';
@@ -29,14 +28,10 @@ const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, children }) => {
 };
 
 const Origen: React.FC = () => {
-  const navigate = useNavigate();
 
   return (
     <main className="origen">
-      <button className="volverBtn" onClick={() => navigate('/')}>
-        <FaArrowLeft />
-        <p>Volver</p>
-      </button>
+      <BtnBack />
       <h1>Origen</h1>
 
       <section className="origenBoxes">

@@ -1,6 +1,5 @@
 @import '../../styles/global.scss';
 
-
 .contacto-page {
   padding: 2rem;
   background-color: $color-light;
@@ -9,17 +8,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   .volverBtn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: auto;
     align-self: flex-start;
     background: none;
     border: none;
     color: $color-dark;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-family: $font-secondary;
     cursor: pointer;
     margin-bottom: 1.5rem;
@@ -31,112 +30,136 @@
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: 300;
-    text-align: flex-start;
-    margin-bottom: 2rem;
-    font-family: $font-primary;
-    color: $color-dark;
+    margin-bottom: 1rem;
     width: 100%;
     max-width: 600px;
+    font-family: $font-primary;
   }
 
+  // SECCIONES GENERALES
   .info-section,
   .whatsapp-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-    font-family: $font-secondary;
-    font-size: 1rem;
-    margin-bottom: 3rem;
     width: 100%;
     max-width: 600px;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-family: $font-secondary;
+  }
 
+  // Ítems de sección (dirección, mail, etc.)
+  .info-section {
     .info-item {
       display: flex;
       align-items: center;
       gap: 0.75rem;
 
       svg {
+        font-size: 1.3rem;
         color: $color-dark;
-        font-size: 1.2rem;
+      }
+
+      span {
+        font-size: 1rem;
       }
     }
+  }
 
+  // FORMULARIO Y SELECCIÓN
+  .whatsapp-section {
     label {
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 0.25rem;
     }
 
+    input,
     select {
-      padding: 0.6rem 1rem;
+      padding: 0.7rem 1rem;
+      width: 100%;
       font-size: 1rem;
+      font-family: $font-secondary;
       border: 1.5px solid $color-gray;
       border-radius: 8px;
       background: $color-light;
-      color: $color-text-dark;
-      width: 100%;
-      transition: border-color 0.2s;
+      color: $color-dark;
+      transition: border 0.25s ease;
 
       &:focus {
         outline: none;
         border-color: $color-dark;
       }
     }
+  }
 
-    .whatsapp-button {
-      width: 100%;
-      max-width: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      background: #144526;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
+  // BOTONES WHATSAPP + LLAMADA
+  .whatsapp-button {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: #144526;
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 0.5rem;
 
-      .icon {
-        font-size: 1.3rem;
-      }
+    .icon {
+      font-size: 1.3rem;
+    }
 
-      &:hover {
-        background: darken(#25d366, 10%);
-      }
+    &:hover {
+      background: darken(#25d366, 10%);
     }
   }
 
-  // RESPONSIVE STYLES
+  // MAPA
+  .map-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 4rem;
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      border: none;
+      height: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  }
+
+  // RESPONSIVE
   @include responsive(sm) {
     padding: 1.5rem 1rem;
 
     h1 {
-      font-size: 1.5rem;
-      text-align: left;
+      font-size: 1.6rem;
     }
 
     .info-section,
     .whatsapp-section {
       gap: 1rem;
+    }
+
+    input,
+    select {
       font-size: 0.95rem;
+      padding: 0.6rem 0.9rem;
     }
 
     .whatsapp-button {
       font-size: 0.95rem;
-      padding: 0.65rem 1.25rem;
-      width: 100%;
-    }
-
-    select {
-      font-size: 0.95rem;
+      padding: 0.7rem 1.2rem;
     }
 
     .volverBtn {

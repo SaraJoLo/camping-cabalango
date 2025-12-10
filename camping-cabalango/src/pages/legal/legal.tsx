@@ -1,8 +1,10 @@
+import BtnBack from '../../components/btnback/btnback';
 import './legal.scss';
 
 const Legal = () => {
   return (
     <section className="legal">
+      <BtnBack />
       <div className="legal__header">
       <h1>Avisos Legales</h1>
       <p>Este sitio web es operado por Cabalango. El acceso y uso de este sitio están sujetos a las siguientes condiciones:</p>

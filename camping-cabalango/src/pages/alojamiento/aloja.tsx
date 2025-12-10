@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './aloja.scss';
+import Btnback from '../../components/btnback/btnback.tsx';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import ImgCampa from '../../assets/img/alojar/campa/albergue2/IMG_9388.jpg';
@@ -39,7 +40,6 @@ const ContentBox: React.FC<BoxProps> = ({ title, imgSrc, slug, children, isOpen,
 };
 
 const Alojamiento: React.FC = () => {
-  const navigate = useNavigate();
   const [openBox, setOpenBox] = useState<string | null>(null);
 
   const handleToggle = (slug: string) => {
@@ -48,10 +48,7 @@ const Alojamiento: React.FC = () => {
 
   return (
     <main className="alojamiento">
-      <button className="volverBtn" onClick={() => navigate('/')}>
-        <FaArrowLeft />
-        <p>Volver</p>
-      </button>
+      <Btnback />
 
       <h1>ALOJAMIENTO</h1>
 

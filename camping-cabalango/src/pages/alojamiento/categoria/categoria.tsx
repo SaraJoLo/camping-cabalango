@@ -1,7 +1,7 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+import Btnback from '../../../components/btnback/btnback.tsx';
 import './categoria.scss';
-import { FaArrowLeft } from 'react-icons/fa';
 
 //import ImgCabUno1 from '../../../assets/img/alojar/cabañas/uno/20230216_115034720.jpg';
 //import ImgCabUno2 from '../../../assets/img/alojar/cabañas/uno/IMG_0513.jpg';
@@ -142,17 +142,13 @@ const data: Record<string, Item[]> = {
 
 const CategoriaDetalle: React.FC = () => {
   const { categoria } = useParams();
-  const navigate = useNavigate();
   const items = categoria ? data[categoria] : [];
   const [zoomImg, setZoomImg] = useState<string | null>(null);
 
   return (
     
     <div className="categoriaDetalle">
-      <button className="volverBtn" onClick={() => navigate('/alojar')}>
-              <FaArrowLeft />
-              <p>Volver</p>
-            </button>
+      <Btnback />
       <h1 className="categoriaTitulo">{categoria?.toUpperCase()}</h1>
 
       <div className="categoriaGrid">

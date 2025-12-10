@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import BtnBack from '../../components/btnback/btnback.tsx';
 import './servicios.scss';
 import CarouselModal from '../../components/carrousel/carrousel.tsx';
-import { FaArrowLeft } from 'react-icons/fa';
 import Img1 from '../../assets/img/camping/7686.jpg';
 import Img2 from '../../assets/img/actividades/324324234324.jpg';
 import Img3 from '../../assets/img/servicios/eventos/54.jpg';
@@ -42,20 +41,14 @@ const serviciosData: Servicio[] = [
     category: 'eventos',
   },
 ];
-
 const Servicios: React.FC = () => {
-  const navigate = useNavigate();
   const [openCategory, setOpenCategory] = useState<string | null>(null);
-
-  const handleBack = () => navigate('/');
   const handleOpen = (cat: string) =>
     setOpenCategory(openCategory === cat ? null : cat);
 
   return (
     <div className="servicios-page">
-      <button className="back-btn" onClick={handleBack}>
-        <FaArrowLeft /> Volver
-      </button>
+      <BtnBack />
 
       <h1>Servicios</h1>
 
