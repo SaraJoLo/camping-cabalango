@@ -31,7 +31,7 @@ function Header() {
       <ul className={`navBar ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" className="navOp" onClick={handleLinkClick}>Inicio</Link></li>
         <li><Link to="/origen" className="navOp" onClick={handleLinkClick}>Origen</Link></li>
-        <li><Link to="/alojar" className="navOp" onClick={handleLinkClick}>Alojamiento</Link></li>
+        <li><Link to="/alojamiento" className="navOp" onClick={handleLinkClick}>Alojamiento</Link></li>
         <li><Link to="/servicios" className="navOp" onClick={handleLinkClick}>Servicios</Link></li>
         <li><Link to="/contacto" className="navOp" onClick={handleLinkClick}>Contacto</Link></li>
       </ul>

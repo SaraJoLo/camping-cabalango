@@ -1,109 +1,103 @@
 @import "../../../styles/global.scss";
 
 .categoriaDetalle {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  width: 94%;
-  max-width: 1200px; 
-  margin: 0 auto;   
-
-  .volverBtn {
-    display: flex;
-    width: 5rem;
-    align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border: none;
-    color: $color-dark;
-    font-size: 0.9rem;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    padding: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  padding: 2.5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: $font-primary;
 
   .categoriaTitulo {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     font-weight: 300;
-    text-align: left;  // Cambiado flex-start a left, para texto
-    margin-bottom: 2rem;
-    font-family: $font-primary;
     color: $color-dark;
+    margin-bottom: 3rem;
+    letter-spacing: 0.04em;
   }
 
   .categoriaGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    @include responsive(md) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include responsive(lg) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
   .categoriaCard {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 100%;  // No dejar que se desborde
+    background: $color-dark;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
   }
 
   .carousel {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.6rem;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding: 0.8rem 1rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
 
-    img {
-      height: 150px;
-      border-radius: 8px;
-      cursor: context-menu;
-      transition: transform 0.3s ease;
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 10px;
+    }
+
+    .imgButton {
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: zoom-in;
+    }
+
+    .categoriaImg {
+      height: 90px;
+      border-radius: 10px;
+      object-fit: cover;
+      opacity: 0.85;
+      transition: transform 0.3s ease, opacity 0.3s ease;
 
       &:hover {
         transform: scale(1.05);
+        opacity: 1;
       }
     }
   }
 
   .categoriaNombre {
-    margin-top: 1rem;
-    font-size: 1.3rem;
-    color: $color-dark;
-    font-family: $font-secondary;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    margin: 1.6rem 1.6rem 0.5rem;
+    font-family: $font-primary;
   }
 
   .categoriaDesc {
     font-size: 1rem;
-    color: $color-dark;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 1.6rem 2rem;
     font-family: $font-secondary;
-    margin-top: 0.5rem;
+    max-width: 680px;
   }
 
   .zoomOverlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     cursor: zoom-out;
+    padding: 2rem;
 
     .zoomImg {
-      max-width: 40%;
+      max-width: 90%;
       max-height: 90%;
-      border-radius: 10px;
+      border-radius: 16px;
       object-fit: contain;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
     }
   }
 }

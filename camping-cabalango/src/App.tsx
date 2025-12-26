@@ -6,8 +6,8 @@ import Map from './components/map/map';
 import Legal from './pages/legal/legal';
 import TerminosCondiciones from './pages/terminos/terminos-condiciones';
 import Origen from './pages/origen/origen';
-import Alojamiento from './pages/alojamiento/aloja';
-import CategoriaDetalle from './pages/alojamiento/categoria/categoria.tsx';
+import Alojamiento from './pages/alojamiento/alojamiento';
+import CategoriaDetalle from './pages/alojamiento/categoria/categoria';
 import Servicios from './pages/servicios/servicios';
 import Contacto from './pages/contacto/contacto';
 import './App.css';
@@ -22,8 +22,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/origen" element={<Origen />} />
             <Route path="/map" element={<Map />} />
-            <Route path="/alojar" element={<Alojamiento />} />
-            <Route path="/alojar/:categoria" element={<CategoriaDetalle />} />
+            <Route path="/alojamiento" element={<Alojamiento />} />
+            <Route path="/alojamiento/:categoria" element={<CategoriaDetalle />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/legal" element={<Legal />} />

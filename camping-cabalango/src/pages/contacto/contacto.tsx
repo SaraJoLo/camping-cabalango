@@ -22,8 +22,8 @@ const REASONS: ContactReason[] = [
 ];
 
 const PHONE_BY_REASON: Record<ContactReason, string> = {
-  Cabañas: "5493517683140",
-  Casillas: "5493517683140", // mismo teléfono hasta que confirmes si cambia
+  Cabañas: "5493541548342",
+  Casillas: "5493541548342",
   Campamentos: "5493541548342",
   "Información general": "5493541548342",
 };
@@ -52,8 +52,6 @@ const Contacto: React.FC = () => {
       <BtnBack />
 
       <h1>Contacto</h1>
-
-      {/* DESCRIPCIÓN BREVE */}
       <p
         style={{
           maxWidth: "600px",
@@ -62,7 +60,7 @@ const Contacto: React.FC = () => {
           lineHeight: "1.5",
         }}
       >
-        Atendemos consultas todos los días de <strong>9 a 20 h</strong>. Elegí un
+        Atendemos consultas todos los días de <strong> 9 a 21 hs</strong>. Elegí un
         motivo y comunicate directamente por WhatsApp o por teléfono. Estamos
         para ayudarte.
       </p>
@@ -131,7 +129,6 @@ const Contacto: React.FC = () => {
           ))}
         </select>
 
-        {/* BOTÓN WHATSAPP */}
         <a
           className="whatsapp-button"
           href={whatsappLink}
