@@ -20,13 +20,12 @@ const serviciosData: Servicio[] = [
     borderColor: 'rgba(230, 178, 92, 0.55)',
     imgSrc: Img1,
     items: [
-      '🏵 Mesas, sillas, bancos y asadores',
+      '🏵 Mesas, sillas, bancos',
       '🏵 Asadores con parilla',
       '🏵 Zona Wi-Fi',
       '🏵 Río con ollas y playa',
-      '🏵 Proveeduría',
+      '🏵 Proveeduría y comedor',
       '🏵 Baños con duchas',
-      '🏵 Estacionamiento',
     ],
   },
   {
@@ -35,9 +34,9 @@ const serviciosData: Servicio[] = [
     borderColor: 'rgba(195, 194, 123, 0.55)',
     imgSrc: Img2,
     items: [
-      '🏵 Albergue de montaña p/ 80 personas',
+      '🏵 2 Albergues de montaña p/ 80 personas',
       '🏵 Zona de acampar con mesas y parrillas',
-      '🏵 Cocina industrial equipada',
+      '🏵 Cocina industrial equipada y asadores',
       '🏵 Actividades recreativas',
       '🏵 Baños con agua caliente',
     ],
