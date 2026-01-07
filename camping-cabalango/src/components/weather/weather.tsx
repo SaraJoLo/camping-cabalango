@@ -1,35 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./weather.scss";
 
 const Weather = () => {
-  useEffect(() => {
-    const existingScript = document.getElementById("meteored-script");
+  const widgetRef = useRef<HTMLDivElement | null>(null);
 
-    if (existingScript) {
-      existingScript.remove();
-    }
+  useEffect(() => {
+    const container = widgetRef.current;
+    if (!container) return;
+    container.innerHTML = "";
 
     const script = document.createElement("script");
-    script.src = "https://api.meteored.com/widget/loader/14794f837367aa9a7327cafd05009953";
+    script.src =
+      "https://api.meteored.com/widget/loader/14794f837367aa9a7327cafd05009953";
     script.async = true;
-    script.id = "meteored-script";
 
-    const widgetContainer = document.getElementById("meteored-widget");
-
-    if (widgetContainer) {
-      widgetContainer.innerHTML = ""; 
-      widgetContainer.appendChild(script);
-    }
+    container.appendChild(script);
 
     return () => {
-      const scriptToRemove = document.getElementById("meteored-script");
-      if (scriptToRemove) scriptToRemove.remove();
+      container.innerHTML = "";
     };
   }, []);
 
   return (
     <div className="weather-widget">
-      <div id="meteored-widget"></div>
+      <div
+        id="mrwid14794f837367aa9a7327cafd05009953"
+        ref={widgetRef}
+      />
     </div>
   );
 };
