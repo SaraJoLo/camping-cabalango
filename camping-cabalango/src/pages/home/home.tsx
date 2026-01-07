@@ -42,7 +42,7 @@ const Home = () => {
         <div className="home__hero-video-container">
           <video
             className="home__hero-video"
-            src={`${import.meta.env.BASE_URL}RioDroneChicas.mp4`}
+            src={`${import.meta.env.BASE_URL}videomp4.mp4`}
             autoPlay
             loop
             muted
