@@ -16,7 +16,6 @@ import {
 import { PiTree } from 'react-icons/pi';
 import Map from '../../components/map/map';
 import Weather from '../../components/weather/weather';
-import InstagramFeed from '../../components/instagram/instagram-feed';
 import ImageCarousel from '../../components/imagecarousel/imagecarousel';
 import Cards from '../../components/cards/cards';
 
@@ -79,11 +78,6 @@ const Home = () => {
             <Weather />
           </div>
         </div>
-      </section>
-
-      <section className="home__instagram">
-        <h2 className="home__instagram-title">Viví el camping a través de Instagram</h2>
-        <InstagramFeed />
       </section>
 
       <section className="home__cards">
